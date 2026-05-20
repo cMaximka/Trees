@@ -1,0 +1,25 @@
+.row1 {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    text-align: center;
+}
+
+.block {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    flex-grow: 1;
+    width: 220px;
+    padding: 10px;
+}
+
+.image {
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 8px;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+

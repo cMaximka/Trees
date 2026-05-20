@@ -1,0 +1,24 @@
+{% import 'macros.twig' as macros %}
+
+<div class="block position-relative">
+    <div class="position-absolute" style ="right: 4px; top: 4px">
+        <form action="trees/{{ object.id }}/delete" method = "post">
+            <button type="submit" class="btn btn-danger">
+                <i class="fas fa-times"></i>
+            </button>
+        </form>
+    </div>
+    <div class="position-absolute" style ="left: 4px; top: 4px">
+        <form action="trees/{{ object.id }}/edit" method = "get">
+            <button type="submit" class="btn btn-info">
+                <i class="fas fa-edit"></i>
+            </button>
+        </form>
+    </div>
+        <img src="{{ object.image }}" alt="{{ object.title }}" class="image" width="100%">
+        {{ macros.btn(object.title, "/trees/" ~ object.id, true, 'primary') }}
+        <div>
+            {{ macros.btn("Картинка", "/trees/" ~ object.id ~ "?show=image", false, 'link') }}
+            {{ macros.btn("Описание", "/trees/" ~ object.id ~ "?show=info", false, 'link') }}
+        </div>
+</div>

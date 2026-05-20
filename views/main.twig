@@ -1,0 +1,11 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+
+<div class="row1">
+{% for object in plants %}
+    {% include 'menu.twig' %}
+{% endfor %}
+</div>
+
+{% endblock %}

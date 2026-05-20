@@ -1,0 +1,7 @@
+{% macro btn(text, url, isActive = true, style = 'primary') %}
+    {% if isActive %}
+        <a href="{{ url }}" class="btn btn-{{ style }} w-100">{{ text }}</a>
+    {% else %}
+        <a href="{{ url }}" class="btn btn-link">{{ text }}</a>
+    {% endif %}
+{% endmacro %}

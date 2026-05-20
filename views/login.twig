@@ -1,0 +1,29 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h1 class="text-center">Вход</h1>
+            
+            {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endif %}
+            
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username">Имя пользователя:</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
