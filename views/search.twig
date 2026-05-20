@@ -31,7 +31,7 @@
     <ul class="list-group col-md-10">
     {% for object in objects %}
         <div class="list-group-item">
-            <div class="text-primary text-decoration-underline"> {{ object.title }} </div>
+            <a href="trees/{{ object.id}}"> {{ object.title }} </a>
         </div>
     {% endfor %}
     </ul>
